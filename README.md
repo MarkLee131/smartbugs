@@ -6,6 +6,17 @@
 <span class="badge-crypto"><a href="#support-and-donate" title="Donate to this project using Cryptocurrency"><img src="https://img.shields.io/badge/crypto-donate-red.svg" alt="crypto donate button" /></a></span>
 <a href="#Supported-Tools"><img alt="analysis tools" src="https://img.shields.io/badge/analysis tools-19-blue"></a>
 
+---
+
+This repo is extended based on the original [SmartBugs](https://github.com/smartbugs/smartbugs):
+
+- We added a tool [Securify2](https://github.com/eth-sri/securify2) and its parsing script.
+- We modified the config of Slither, to enable its latest version.
+- We added runtime config for some tools to make them work properly, which is saved in `site-config` folder.
+- To run tools on large-scale contracts, we added a folder `sbd` to save the file paths of contracts. An `sbd` file (smartbugs dataset) contains a list of files to analyse, one per line.
+- We added a default Solidity version for analysis, which contributes to the analysis of contracts with no `pragma solidity` statement. You can change it as you like.
+
+----
 
 SmartBugs is an extensible platform with a uniform interface to tools
 that analyse blockchain programs for weaknesses and other properties.
@@ -56,6 +67,7 @@ that analyse blockchain programs for weaknesses and other properties.
 | [Solhint](https://github.com/protofire/solhint)         | 3.3.8 | :heavy_check_mark: |                    |                    |
 | [teEther](https://github.com/nescio007/teether)      | #04adf56 |                    |                    | :heavy_check_mark: |
 | [Vandal](https://github.com/usyd-blockchain/vandal)  | #d2b0043 |                    |                    | :heavy_check_mark: |
+| [Securify2](https://github.com/eth-sri/securify2)  | 2.0 | :heavy_check_mark:         |                    |  |
 
 ## Requirements
 
