@@ -30,4 +30,4 @@ if [ "$TIMEOUT" -gt 0 ]; then
     OPT_TIMEOUT="-glt $TO"
 fi
 
-python osiris/osiris.py $OPT_TIMEOUT -s "$FILENAME"  $OPT_CONTRACT
+python osiris/osiris.py $OPT_TIMEOUT -s "$FILENAME"  $OPT_CONTRACT -dl 45

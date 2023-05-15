@@ -1,0 +1,10 @@
+name: Securify2 # optional
+version: 2.0 # version number, commit id, ... (optional)
+origin: https://github.com/eth-sri/securify2 # optional
+info: Securify 2.0 is a security scanner for Ethereum smart contracts supported by the Ethereum Foundation and ChainSecurity. The core research behind Securify was conducted at the Secure, Reliable, and Intelligent Systems Lab at ETH Zurich. # optional
+image: troublor/securify2 # id of Docker image (mandatory)
+output: /results/
+bin: scripts
+solidity:
+    entrypoint: "'$BIN/do_solidity' '$FILENAME' '$BIN'"
+    solc: yes

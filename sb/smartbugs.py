@@ -55,14 +55,18 @@ def collect_tasks(files, tools, settings):
 
     def get_solc(pragma, fn, toolid):
         if not pragma:
-            raise sb.errors.SmartBugsError(f"{fn}: no pragma, cannot determine solc version")
+            pragma = "pragma solidity ^0.4.11;"
+            sb.logging.message(f"{fn}: no pragma, assuming {pragma}")
+            # raise sb.errors.SmartBugsError(f"{fn}: no pragma, cannot determine solc version")
         if not sb.solidity.ensure_solc_versions_loaded():
             sb.logging.message(sb.colors.warning(
                 "Failed to load list of solc versions; are we connected to the internet? Proceeding with local compilers"),
                 "")
         solc_version = sb.solidity.get_solc_version(pragma)
         if not solc_version:
-            raise sb.errors.SmartBugsError(f"{fn}: no compiler found that matches {pragma}")
+            solc_version = sb.solidity.get_solc_version("pragma solidity ^0.4.11;")
+            sb.logging.message(f"{fn}: no compiler found that matches {pragma}, assuming {solc_version}")
+            # raise sb.errors.SmartBugsError(f"{fn}: no compiler found that matches {pragma}")
         solc_path = sb.solidity.get_solc_path(solc_version)
         if not solc_path:
             raise sb.errors.SmartBugsError(f"{fn}: cannot load solc {solc_version} needed by {toolid}")

@@ -30,4 +30,4 @@ if [ "$TIMEOUT" -gt 0 ]; then
     OPT_TIMEOUT="--execution-timeout $TO"
 fi
 
-/usr/local/bin/myth analyze $OPT_TIMEOUT -o json "$FILENAME$OPT_CONTRACT"
+/usr/local/bin/myth analyze $OPT_TIMEOUT -o json "$FILENAME$OPT_CONTRACT" --max-depth 45

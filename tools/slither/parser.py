@@ -103,11 +103,11 @@ def parse(exit_code, log, output):
     try:
         with io.BytesIO(output) as o, tarfile.open(fileobj=o) as tar:
             output_json = tar.extractfile("output.json").read()
-            issues = json.loads(output_json)
+            issues = json.loads(output_json)["results"]["detectors"]
     except Exception as e:
         fails.add(f"error parsing results: {e}")
         issues = {}
-
+    # print(issues[0])
     for issue in issues:
         finding = {}
         for i,f in ( ("check", "name"), ("impact", "impact" ),
@@ -135,7 +135,7 @@ def parse(exit_code, log, output):
         for element in elements:
             if element.get("type") == "function":
                 finding["function"] = element["name"]
-                finding["contract"] = element["contract"]["name"]
+                finding["contract"] = element["source_mapping"]["filename_used"]
                 break
         findings.append(finding)
 
