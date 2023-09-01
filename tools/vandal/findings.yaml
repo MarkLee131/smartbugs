@@ -1,0 +1,11 @@
+CheckedCallStateUpdate: {}
+Destroyable:
+    classification: SWC-106, DASP-2
+OriginUsed:
+    classification: SWC-115, DASP-2
+ReentrantCall:
+    classification: SWC-107, DASP-1
+UncheckedCall:
+    classification: SWC-104, DASP-4
+UnsecuredValueSend:
+    classification: SWC-105, DASP-2
