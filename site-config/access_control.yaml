@@ -37,3 +37,5 @@ json: true # false
 #quiet: false
 
 # find /home/kaixuan/ac_fix/access-control-repair/data/contracts -name "*.sol" -exec realpath {} \; > access_control.sbd
+
+# ./smartbugs -c ./site-config/access_control.yaml -f ./sbd/access_control.sbd 
