@@ -1,0 +1,22 @@
+Callstack bug:
+    classification: DASP-5
+Concurrency bug:
+    classification: SWC-114, DASP-7
+Division bugs:
+    classification: DASP-3
+Modulo bugs:
+    classification: DASP-3
+Overflow bugs:
+    classification: SWC-101, DASP-3
+Reentrancy bug:
+    classification: SWC-107, DASP-1
+Signedness bugs:
+    classification: DASP-3
+Time dependency bug:
+    classification: SWC-116, DASP-8
+Timedependency bug:
+    classification: SWC-116, DASP-8
+Truncation bugs:
+    classification: DASP-3
+Underflow bugs:
+    classification: SWC-101, DASP-3

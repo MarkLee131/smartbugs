@@ -70,20 +70,17 @@ def main():
 def list2postgres(l):
     es = []
     for e in l:
-        if isinstance(e, tuple):
-            es.append("(" + ",".join(str(x) for x in e) + ")")
+        if any (ch in e for ch in ('"', ",", "\n", "{", "}")):
+            es.append('"'+e.replace('"','\\"')+'"')
         else:
-            if '"' in e or "," in e or "\n" in e:
-                es.append('"' + e.replace('"', '\\"') + '"')
-            else:
-                es.append(e)
+            es.append(e)
     return "{" + ",".join(es) + "}"
 
         
 def list2excel(l):
     es = []
     for e in l:
-        if '"' in e or "," in e or "\n" in e:
+        if any (ch in e for ch in ('"', ",", "\n")):
             es.append('"'+e.replace('"','""')+'"')
         else:
             es.append(e)

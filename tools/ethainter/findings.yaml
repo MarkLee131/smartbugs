@@ -1,0 +1,13 @@
+AccessibleSelfdestruct:
+    classification: SWC-106, DASP-2
+TaintedDelegatecall:
+    classification: SWC-112
+TaintedOwnerVariable:
+    classification: SWC-124, DASP-2
+TaintedSelfdestruct:
+    classification: SWC-105, DASP-2
+TaintedStoreIndex:
+    classification: SWC-124, DASP-2
+TaintedValueSend:
+    classification: SWC-105, DASP-2
+UncheckedTaintedStaticcall: {}
