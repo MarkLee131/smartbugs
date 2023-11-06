@@ -61,6 +61,7 @@ that analyse blockchain programs for weaknesses and other properties.
 | [Oyente](https://github.com/smartbugs/oyente)        | #480e725 | :heavy_check_mark: |                    | :heavy_check_mark: |
 | [Pakala](https://github.com/palkeo/pakala)   | #c84ef38 v1.1.10 |                    |                    | :heavy_check_mark: |
 | [Securify](https://github.com/eth-sri/securify)              |  | :heavy_check_mark: |                    | :heavy_check_mark: |
+| [Semgrep](https://github.com/Decurity/semgrep-smart-contracts)  | #c3a9f40 | :heavy_check_mark: |                    |                    |
 | [sFuzz](https://github.com/duytai/sFuzz) | #48934c0 (2019-03-01) | :heavy_check_mark: |  |  |
 | [Slither](https://github.com/crytic/slither)                 |  | :heavy_check_mark: |                    |                    |
 | [Smartcheck](https://github.com/smartdec/smartcheck)         |  | :heavy_check_mark: |                    |                    |
