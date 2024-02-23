@@ -55,7 +55,7 @@ def collect_tasks(files, tools, settings):
 
     def get_solc(pragma, fn, toolid):
         if not pragma:
-            pragma = "pragma solidity ^0.4.11;"
+            pragma = "pragma solidity ^0.8.0;"
             sb.logging.message(f"{fn}: no pragma, assuming {pragma}")
             # raise sb.errors.SmartBugsError(f"{fn}: no pragma, cannot determine solc version")
         if not sb.solidity.ensure_solc_versions_loaded():

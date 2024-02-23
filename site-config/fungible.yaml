@@ -1,0 +1,39 @@
+#files: []
+##   $HOME or ${HOME} is replaced by the home dir of the current user
+#
+#runtime: false
+#
+#main: false
+#
+#tools: []
+#
+#runid: ${YEAR}${MONTH}${DAY}_${HOUR}${MIN}
+##   vars: YEAR, MONTH, DAY, HOUR, MIN, SEC, ZONE,
+##   HOME, PID, SBVERSION, SBHOME
+#
+#overwrite: false
+#
+processes: 40
+#
+timeout: 600 # [s] 0/null = no timeout enforced, tool default applies
+#
+cpu-quota: 20000 # 0/null = no quota
+#
+mem-limit: 2g # "512m" or "4g"  0/null = no quota
+#
+results: /home/kaixuan/smart_contracts/MPM/Clustering4SC/fungible_token/data/sast/${TOOL}/${RUNID}/${RELDIR}/${FILENAME}
+# results: results/${TOOL}/${RUNID}/${RELDIR}/${FILENAME}
+##   vars: all vars from "runid" above, as well as RUNID,
+##   TOOL, MODE (solidity, bytecode, runtime), ABSDIR, RELDIR,
+##   FILENAME, FILEBASE, FILEEXT (FILENAME = FILEBASE + "." + FILEEXT)
+#
+log: /home/kaixuan/smart_contracts/MPM/Clustering4SC/fungible_token/data/sast/${RUNID}.log
+#log: results/logs/${RUNID}.log
+##   vars: all vars from "runid" above, as well as RUNID
+# json: false
+json: true # false
+#sarif: false
+#
+#quiet: false
+
+# mount -t tmpfs -o size=1024m tmpfs /your folder

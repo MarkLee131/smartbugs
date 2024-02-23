@@ -135,7 +135,21 @@ def parse(exit_code, log, output):
         for element in elements:
             if element.get("type") == "function":
                 finding["function"] = element["name"]
-                finding["contract"] = element["source_mapping"]["filename_used"]
+                ### may cause key error for filename_used
+                if "filename_used" in element["source_mapping"]:
+                    
+                    finding["contract"] = element["source_mapping"]["filename_used"]
+                    print(f"filename_used found in {element['source_mapping']}")
+                    import time
+                    time.sleep(10)
+                else:
+                    # print(f"filename_used not found in {element['source_mapping']}")
+                    # ### print the keys in element["source_mapping"]
+                    # print(element["source_mapping"].keys())
+                    # dict_keys(['start', 'length', 'filename_relative', 'filename_absolute', 'filename_short', 'is_dependency', 'lines', 'starting_column', 'ending_column'])
+                    # import time
+                    # time.sleep(10)
+                    finding["contract"] = element["source_mapping"]["filename_absolute"]
                 break
         findings.append(finding)
 
