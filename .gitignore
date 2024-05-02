@@ -19,5 +19,4 @@ venv/
 .idea/
 results/*.*
 
-samples/
 sbd/
