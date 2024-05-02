@@ -18,3 +18,6 @@ dataset/solidiFI
 venv/
 .idea/
 results/*.*
+
+samples/
+sbd/

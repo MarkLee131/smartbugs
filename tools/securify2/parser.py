@@ -20,7 +20,6 @@ FINDINGS = {
 "Right-to-left-override pattern",
 "External call in loop",
 "Incorrect ERC20 Interface",
-
 "Multiplication after division",
 "Missing Input Validation",
 "Benign Reentrancy",

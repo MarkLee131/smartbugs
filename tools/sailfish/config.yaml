@@ -1,0 +1,10 @@
+name: Sailfish
+version: 0.10.0
+origin: https://github.com/crytic/slither
+info: Sailfish is a 
+image: holmessherlock/sailfish:latest
+output: $FILENAME/
+bin: scripts
+solidity:
+    entrypoint: "'$BIN/do_solidity.sh' '$FILENAME' '$TIMEOUT' '$BIN'"
+    solc: yes

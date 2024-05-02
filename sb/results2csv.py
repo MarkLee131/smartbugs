@@ -97,8 +97,8 @@ def data2csv(task_log, parser_output, postgres, fields):
         "start": task_log["result"]["start"],
         "duration": task_log["result"]["duration"],
         "exit_code": task_log["result"]["exit_code"],
-        "findings": sorted({ (sb.utils.str2label(f["name"]), f.get("line", 0))
-                     for f in parser_output["findings"]}),
+        "findings": sorted({ sb.utils.str2label(f["name"])
+                             for f in parser_output["findings"]}),
         "infos": parser_output["infos"],
         "errors": parser_output["errors"],
         "fails": parser_output["fails"],

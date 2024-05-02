@@ -6,5 +6,5 @@ image: troublor/securify2 # id of Docker image (mandatory)
 output: /results/
 bin: scripts
 solidity:
-    entrypoint: "'$BIN/do_solidity' '$FILENAME' '$BIN'"
+    entrypoint: "'$BIN/do_solidity.sh' '$FILENAME' '$BIN'"
     solc: yes
