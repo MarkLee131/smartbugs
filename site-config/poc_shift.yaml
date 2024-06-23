@@ -5,7 +5,7 @@
 #
 #main: false
 #
-tools: [poc_shift]
+tools: [all]
 #
 #runid: ${YEAR}${MONTH}${DAY}_${HOUR}${MIN}
 ##   vars: YEAR, MONTH, DAY, HOUR, MIN, SEC, ZONE,
